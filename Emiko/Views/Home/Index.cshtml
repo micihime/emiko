@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Homepage";
+}
+<div id="content">
+    <br>
+    <p>
+        Dear visitor,
+    </p>
+    <p>
+        welcome to my application that was made as a part of my diploma thesis. This application aims to create haiku poems that will be considered by human as pretty.
+    </p>
+    <p>
+        Haiku poetry was originally developed in Japan. In tradition, haiku consists of 5-7-5 syllable pattern of words in three lines and usually it is often inspired by nature and captures a feeling. Haiku was adapted to English and other languages as well.
+    </p>
+    <p>
+        This application aims to evolve haiku poems based on YOUR preference. Each poem should be evaluated for its aesthetic value and given a fitness score (stupid, so-so or excellent) by selecting one of radio buttons below each poem.
+    </p>
+    <p>
+        The idea of evolution is to create better and better haiku poems. Algorithm starts by having a population of randomly selected poems from haiku database. Then the evolution proceeds by reproduction of haikus. The poems with better fitness have bigger chance to reproduce their genes.
+    </p>
+    <p>
+        At the end, you will be able to see the best haiku poems that you helped to create :)
+    </p>
+    <div style="text-align:center">
+        @Html.ActionLink("START EVOLUTION", "Evolution", "Home")
+    </div>
+</div>

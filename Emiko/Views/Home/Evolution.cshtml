@@ -1,0 +1,21 @@
+﻿@model ViewModels.PopulationOfHaikus
+
+@{
+    ViewBag.Title = "Haiku Evolution";
+}
+
+<div id="content">
+    <br>
+    <h2>
+        Please, evaluate following poems.
+    </h2>
+</div>
+
+<div style="text-align:center">
+    @using (Html.BeginForm())
+    {
+        @Html.EditorFor(x => x.Population)
+        <input type="submit" />
+    }
+    <br>
+</div>

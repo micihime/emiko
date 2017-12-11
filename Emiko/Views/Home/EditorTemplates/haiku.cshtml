@@ -1,0 +1,28 @@
+﻿@model ViewModels.Haiku
+
+@{
+    ViewBag.Title = "Interactive Evolution of Haiku Poems";
+}
+
+<div id="haiku">
+    <table class="center">
+        <tr>
+            <th>
+                @Html.HiddenFor(x => x.Id)
+                <p><h2>@Model.V1</h2></p>
+                <p><h2>@Model.V2</h2></p>
+                <p><h2>@Model.V3</h2></p>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                @foreach (var a in ViewModels.Haiku.humanEval)
+                {
+                    <p>
+                        @Html.RadioButtonFor(b => b.HumanFitness, a.Id)  @a.Name
+                    </p>
+                }
+            </th>
+        </tr>
+    </table>
+</div>
